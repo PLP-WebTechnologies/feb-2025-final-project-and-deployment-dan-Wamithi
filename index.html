@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Don Wamithi Blog</div>
+            <button class="menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link" data-section="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-section="blog">Blog</a></li>
+                    <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Home Section -->
+    <section id="home" class="section active-section">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <h1>Welcome to My Blog</h1>
+                <p>Discover insightful articles about technology, design, and web development.</p>
+                <a href="#" class="btn read-more-btn">Read More</a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <main>
+            <div class="container">
+                <h2>Latest Posts</h2>
+                <div class="posts-container">
+                    <!-- Posts will be dynamically added here -->
+                </div>
+            </div>
+        </main>
+    </section>
+    
+    <!-- About Section (Hidden by default) -->
+    <section id="about" class="section" style="display: none;">
+        <div class="container" style="padding: 5rem 0;">
+            <h1>About Me</h1>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="blog.jpeg" alt="Profile picture" style="width: 100%; border-radius: 10px;">
+                </div>
+                <div style="flex: 2; min-width: 300px;">
+                    <p>Hello! I'm a passionate web developer and blogger with expertise in HTML, CSS, and JavaScript. I created this blog to share my knowledge and experiences with the world.</p>
+                    <p style="margin-top: 1rem;">With over 5 years of experience in web development, I've worked on various projects ranging from small business websites to complex web applications.</p>
+                    <p style="margin-top: 1rem;">When I'm not coding, you can find me hiking, reading, or experimenting with new technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section (Hidden by default) -->
+    <section id="blog" class="section" style="display: none;">
+        <div class="container" style="padding: 5rem 0;">
+            <h1>All Blog Posts</h1>
+            <div class="posts-container" style="margin-top: 2rem;">
+                <!-- Blog posts will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section (Hidden by default) -->
+    <section id="contact" class="section" style="display: none;">
+        <div class="container" style="padding: 5rem 0;">
+            <h1>Contact Me</h1>
+            <div style="max-width: 600px; margin: 2rem auto;">
+                <form id="contact-form">
+                    <div style="margin-bottom: 1rem;">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem;">Name</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem;">Email</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label for="message" style="display: block; margin-bottom: 0.5rem;">Message</label>
+                        <textarea id="message" name="message" required rows="5" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+                <div id="form-status" style="margin-top: 1rem; text-align: center;"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest articles and news directly in your inbox.</p>
+            <form id="newsletter-form" class="form-control">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle">🌓</button>
+    
+    <!-- Modal -->
+    <div class="modal" id="subscription-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Thank You for Subscribing!</h2>
+            <p>You have successfully subscribed to our newsletter. You'll receive our latest updates directly in your inbox.</p>
+        </div>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Thank you for your message!</div>
+    
+   <script src="scripts.js"></script>
+</body>
+</html>
